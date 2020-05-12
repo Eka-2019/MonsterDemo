@@ -17,6 +17,7 @@ public class TestCreateAccount {
     }
 
 
+
     @Test
     public void testCreateAccount() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -36,7 +37,7 @@ public class TestCreateAccount {
         String accountPageText = accountPage.getPageText();
         Assert.assertTrue(accountPageText.toLowerCase().contains("email"));
 
-        accountPage.enterEmailAdress("test6@yandex.ru");
+        accountPage.enterEmailAdress("test10@yandex.ru");
 
         accountPage.enterPassword(AccountPage.decodedPassword("UXdlcnRfMTIzNDU="));
         accountPage.reEnterPassword(AccountPage.decodedPassword("UXdlcnRfMTIzNDU="));

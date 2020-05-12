@@ -4,13 +4,16 @@
 
     <test name="CreateAccount">
         <classes>
-            <class name="TestCreateAccount"/>
+            <class name="TestCreateAccountAndSearchJobSelenide"/>
         </classes>
     </test>
 
+    <!--
     <test name="JobSearch">
         <classes>
             <class name="TestJobSearch"/>
         </classes>
     </test>
+    -->
+
 </suite>

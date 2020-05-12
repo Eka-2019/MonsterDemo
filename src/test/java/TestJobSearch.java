@@ -22,6 +22,7 @@ public class TestJobSearch {
     public void searchJobTest() {
 
         DashboardPage dshPage = new DashboardPage(driver);
+
         dshPage.pressLink();
         dshPage.getElementByNumber(2).click();
         dshPage.clickSaveBtn();

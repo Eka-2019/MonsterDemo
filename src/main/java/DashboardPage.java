@@ -72,7 +72,6 @@ public class DashboardPage {
         return quantity;
     }
 
-
     public WebElement getDashboardView(){
         WebElement dsh = driver.findElement(dashboard);
         return dsh;
