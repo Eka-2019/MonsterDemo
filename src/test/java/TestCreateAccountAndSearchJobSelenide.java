@@ -32,7 +32,7 @@ public class TestCreateAccountAndSearchJobSelenide {
         open("https://www.monsterworksdemo.com/account/account-lite");
 
         $(By.xpath("//label[@id='label-elem_0']")).shouldHave(text("email"));
-        $(By.xpath("//input[@id='c_elem_0']")).setValue("test71@yandex.ru");
+        $(By.xpath("//input[@id='c_elem_0']")).setValue("test72@yandex.ru");
         $(By.xpath("//input[@id='a_elem_1']")).setValue("Qa_Qa_123");
         $(By.xpath("//input[@id='a_elem_2']")).setValue("Qa_Qa_123");
         $(By.xpath("//select[@id='elem_3']")).selectOption(1);
@@ -45,7 +45,7 @@ public class TestCreateAccountAndSearchJobSelenide {
         $(By.xpath("//a[text()[contains(.,'Philips Jobs')]]")).click();
         $$(By.xpath("//div[@class='flex-row']")).get(1).click();
         $(By.xpath("//a[@id='SaveJob']//span[@class='label'][text()[contains(.,'Save')]]")).click();
-        int lastElementIndex = savedJobsCollection.size()-1;
+        int lastElementIndex = savedJobsCollection.size();
         $$(By.xpath("//div[@class='flex-row']")).get(lastElementIndex).click();
         $(By.xpath("//a[@id='SaveJob']//span[@class='label'][text()[contains(.,'Save')]]")).click();
         $(By.xpath("//a[@id='dropdown-My-job-search']")).hover().selectOption(String.valueOf(menuSavedJob));
