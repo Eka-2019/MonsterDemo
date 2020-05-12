@@ -23,12 +23,18 @@ public class TestCreateAccountAndSearchJobSelenide {
         ElementsCollection savedJobsCollection = $$(By.xpath("//div[@class='list display-table']/div"));
         SelenideElement menuSavedJob = $(By.xpath("//a[@tabindex='0'][text()='Saved Jobs']"));
 
+        /**
+         * main page open
+         */
         open("https://www.monsterworksdemo.com/");
         // wait(2000);
 
         $(By.xpath("//div[@tab-id='1']//h3[@tabindex='0']")).shouldHave(text("already have"));
         $(By.xpath("//span[contains(text(),'CREATE ACCOUNT')]")).click();
 
+        /**
+         * account page open
+         */
         open("https://www.monsterworksdemo.com/account/account-lite");
 
         $(By.xpath("//label[@id='label-elem_0']")).shouldHave(text("email"));
@@ -39,9 +45,11 @@ public class TestCreateAccountAndSearchJobSelenide {
         $(By.xpath("//label[@id='id_option_label_elem_5-true']/span")).click();
         $(By.xpath("//button[text()[contains(.,'Create')]]")).click();
 
-        //open("https://www.monsterworksdemo.com/dashboard/");
-        $(By.xpath(".//h2[contains(text(), 'My Check')]")).isDisplayed();
+        /**
+        * new Dashboard page should be open
+         */
 
+        $(By.xpath(".//h2[contains(text(), 'My Check')]")).isDisplayed();
         $(By.xpath("//a[text()[contains(.,'Philips Jobs')]]")).click();
         $$(By.xpath("//div[@class='flex-row']")).get(1).click();
         $(By.xpath("//a[@id='SaveJob']//span[@class='label'][text()[contains(.,'Save')]]")).click();
